@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Instabot - Free Instagram (tm) Bot for automation</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.5.0/modern-normalize.min.css"
+    />
+    <meta name="title" content="ffmemes bot" />
+    <meta name="description" content="Best ever memes bot for Telegram" />
+    <meta name="language" content="English" />
+
+    <meta property="og:image" content="/assets/img/logo-github.png" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <style></style>
+    <div class="container">
+      <div class="code section" onmouseenter="orToSide(true)">
+        <!-- <div class="github">
+            <a class="github-button" href="https://github.com/instagrambot/instabot" data-icon="octicon-star" data-show-count="true" aria-label="Star instagrambot/instabot on GitHub">Star</a>
+            <a class="github-button" href="https://github.com/instagrambot/instabot/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork instagrambot/instabot on GitHub">Fork</a>
+        </div> -->
+
+        <div class="section__title en_memes">
+          <h1>English version</h1>
+        </div>
+
+        <div class="section__description">
+          <!-- <h2 style="margin-top: 1.5em;">Free instagram bot</h2>
+            <h2>Highly customisable</h2>
+            <h2>Anti-blocking system</h2> -->
+        </div>
+
+        <!-- <div class="section__additional">
+            <div class="terminal" style="margin-top: 2.5em;">
+                <div>$ pip install -U instabot</div>
+            </div>
+
+            <div class="terminal" style="margin: 1em auto;">
+                <div><span class="highlight">import</span> instabot</div>
+                <div>bot = instabot.Bot()</div>
+                <div>bot.login()</div>
+                <div>bot.follow("<a href="https://www.instagram.com/ohld/">ohld</a>")</div>
+            </div>
+        </div> -->
+
+        <div class="code__cta section__buttons">
+          <a class="button" href="/home.html">
+            <button class="readme">
+              <span class="text">Start ROFL`ing</span>
+            </button>
+          </a>
+        </div>
+      </div>
+      <div class="extension section" onmouseenter="orToSide(false)">
+        <div class="section__title russian_memes">
+          <h1>Русске мемес</h1>
+        </div>
+
+        <div class="section__description">
+          <!-- <h2 style="margin-top: 1.5em;">Free likes for new posts</h2>
+            <h2>Go viral in Explore tab (<a href="https://likeup.me/?ref=instabot-landing&utm_source=instabot-landing">read more</a>)</h2>
+            <h2>Based on <a href="https://gramup.me/home/?ref=instabot-landing&utm_source=instabot-landing">GramUp</a> Family</h2> -->
+        </div>
+
+        <!-- <div class="section__additional">
+            <div>
+                <img src="images/likes.gif" height="240"></img>
+            </div>
+        </div> -->
+
+        <div class="extension__cta section__buttons">
+          <a
+            class="button"
+            href="http://get.likeup.me/?utm_source=instabot-landing"
+          >
+            <button class="readmore">
+              <span class="text">Го кекать</span>
+            </button>
+          </a>
+        </div>
+      </div>
+
+      <h1 class="or">Fast Food Memes</h1>
+      <h2 class="or_sub">Personalised memes in Telegram</h2>
+      <script>
+        function orToSide(isLeftSide = false) {
+          const $or = document.querySelector(".or");
+          const $or_sub = document.querySelector(".or_sub");
+
+          $or.classList.add(isLeftSide ? "left" : "right");
+          $or.classList.remove(isLeftSide ? "right" : "left");
+          $or_sub.classList.add(isLeftSide ? "left" : "right");
+          $or_sub.classList.remove(isLeftSide ? "right" : "left");
+        }
+      </script>
+      <!-- <script async defer src="https://buttons.github.io/buttons.js"></script> -->
+    </div>
+  </body>
+</html>
