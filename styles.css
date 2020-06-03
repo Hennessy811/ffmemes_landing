@@ -1,12 +1,22 @@
 body {
   height: 100%;
   color: white;
+
+  --left-side-color: #ff5737;
+  --right-side-color: #ffc30f;
 }
 
 .container {
   display: flex;
   min-height: 100vh;
   position: relative;
+}
+
+a,
+a:focus,
+a:active {
+  outline: none;
+  text-decoration: none;
 }
 
 /*.or {*/
@@ -131,7 +141,7 @@ button {
   color: #fff !important;
   text-decoration: none;
   background: #4182e4;
-  transition: 0.2s ease-in-out;
+  transition: 0.2s;
   background: rgba(0, 0, 0, 0.15);
   border-radius: 3px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -141,8 +151,8 @@ button {
 }
 
 button:hover {
-  background: #fff;
-  color: #24292e !important;
+  background: transparent;
+  color: #ffc30f !important;
 }
 
 button:hover .text {
@@ -181,7 +191,7 @@ button {
 }
 
 .extension__cta button {
-  margin-top: 0.8em;
+  /* margin-top: 0.8em; */
 }
 
 .readme {
@@ -189,10 +199,10 @@ button {
   fill: #24292e;
 }
 
-.readme:hover {
+/* .readme:hover {
   color: #24292e !important;
   fill: #24292e;
-}
+} */
 
 /* .code {
   color: #24292e !important;
@@ -225,7 +235,7 @@ h1 {
   transition: padding 0.7s;
   position: absolute;
   top: 0;
-  height: 15vh;
+  height: 20vh;
   margin: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -242,7 +252,7 @@ h1 {
 }
 
 .or_sub {
-  top: 50px;
+  top: 21vh;
   transition: padding 1.2s;
 }
 
@@ -325,4 +335,61 @@ h1 {
 
 .en_memes {
   /* color: #ffc30f; */
+}
+
+.en_cta_btn {
+  background-color: #ffc30f;
+  border: 2px solid #dba400;
+}
+
+.ru_cta_btn {
+  background-color: #ff5737;
+  border: 2px solid #f37e66;
+}
+
+.ru_cta_btn:hover {
+  color: #ff5733 !important;
+}
+
+.en_cta_btn,
+.ru_cta_btn {
+  font-weight: 600;
+  border-radius: 5px;
+  font-size: 2rem;
+}
+.en_cta_btn:hover,
+.ru_cta_btn:hover {
+  box-shadow: 0px 5px 21px rgba(0, 0, 0, 0.15);
+  background-color: transparent;
+}
+
+.or.single,
+.or_sub.single {
+  color: #ffc30f;
+  -webkit-text-fill-color: unset;
+  padding: 0;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.code.gradient {
+  background: linear-gradient(
+    90deg,
+    rgba(88, 24, 69, 1) 0%,
+    rgba(144, 12, 63, 1) 25%,
+    rgba(199, 0, 57, 1) 50%,
+    rgba(255, 87, 51, 1) 75%,
+    rgba(255, 195, 15, 1) 100%
+  );
+  /* color 1 - #581845 */
+  /* color 2 - #900C3F */
+  /* color 3 - #C70039 */
+  /* color 4 - #FF5733 */
+  /* color 5 - #FFC30F */
+}
+
+.en_cta_btn.big {
+  font-size: 3rem;
 }

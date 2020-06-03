@@ -7,7 +7,7 @@
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Instabot - Free Instagram (tm) Bot for automation</title>
+    <title>ffmemes - Personalised memes feed</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.5.0/modern-normalize.min.css"
@@ -16,73 +16,38 @@
     <meta name="description" content="Best ever memes bot for Telegram" />
     <meta name="language" content="English" />
 
-    <meta property="og:image" content="/assets/img/logo-github.png" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <style></style>
     <div class="container">
-      <div class="code section" onmouseenter="orToSide(true)">
-        <!-- <div class="github">
-            <a class="github-button" href="https://github.com/instagrambot/instabot" data-icon="octicon-star" data-show-count="true" aria-label="Star instagrambot/instabot on GitHub">Star</a>
-            <a class="github-button" href="https://github.com/instagrambot/instabot/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork instagrambot/instabot on GitHub">Fork</a>
-        </div> -->
-
+      <div class="code section en-part" onmouseenter="orToSide(true)">
         <div class="section__title en_memes">
           <h1>English version</h1>
         </div>
 
-        <div class="section__description">
-          <!-- <h2 style="margin-top: 1.5em;">Free instagram bot</h2>
-            <h2>Highly customisable</h2>
-            <h2>Anti-blocking system</h2> -->
-        </div>
-
-        <!-- <div class="section__additional">
-            <div class="terminal" style="margin-top: 2.5em;">
-                <div>$ pip install -U instabot</div>
-            </div>
-
-            <div class="terminal" style="margin: 1em auto;">
-                <div><span class="highlight">import</span> instabot</div>
-                <div>bot = instabot.Bot()</div>
-                <div>bot.login()</div>
-                <div>bot.follow("<a href="https://www.instagram.com/ohld/">ohld</a>")</div>
-            </div>
-        </div> -->
-
         <div class="code__cta section__buttons">
-          <a class="button" href="/home.html">
-            <button class="readme">
-              <span class="text">Start ROFL`ing</span>
+          <a
+            class="button"
+            href="tg://resolve?domain=ffmemesbot&start=ffmemescom_lang_en"
+          >
+            <button class="readme en_cta_btn">
+              <!-- <span class="text">Start ROFL`ing</span> -->
+              <span class="text">Go 😹</span>
             </button>
           </a>
         </div>
       </div>
-      <div class="extension section" onmouseenter="orToSide(false)">
+
+      <div class="extension section rus-part" onmouseenter="orToSide(false)">
         <div class="section__title russian_memes">
-          <h1>Русске мемес</h1>
+          <h1>Русская версия</h1>
         </div>
-
-        <div class="section__description">
-          <!-- <h2 style="margin-top: 1.5em;">Free likes for new posts</h2>
-            <h2>Go viral in Explore tab (<a href="https://likeup.me/?ref=instabot-landing&utm_source=instabot-landing">read more</a>)</h2>
-            <h2>Based on <a href="https://gramup.me/home/?ref=instabot-landing&utm_source=instabot-landing">GramUp</a> Family</h2> -->
-        </div>
-
-        <!-- <div class="section__additional">
-            <div>
-                <img src="images/likes.gif" height="240"></img>
-            </div>
-        </div> -->
 
         <div class="extension__cta section__buttons">
-          <a
-            class="button"
-            href="http://get.likeup.me/?utm_source=instabot-landing"
-          >
-            <button class="readmore">
-              <span class="text">Го кекать</span>
+          <a href="tg://resolve?domain=ffmemesbot&start=ffmemescom_lang_ru">
+            <button class="readmore ru_cta_btn">
+              <span class="text">Го 😹 </span>
             </button>
           </a>
         </div>
@@ -101,7 +66,38 @@
           $or_sub.classList.remove(isLeftSide ? "right" : "left");
         }
       </script>
-      <!-- <script async defer src="https://buttons.github.io/buttons.js"></script> -->
+      <script>
+        // Open Telegram app with deeplink
+        document.addEventListener("DOMContentLoaded", function () {
+          const { search } = document.location;
+          if (search) {
+            setTimeout(() => {
+              window.location = `tg://resolve?domain=ffmemesbot${search}`;
+
+              setTimeout(function () {
+                window.location = "https://t.me/ffmemesbot";
+              }, 250);
+            }, 300);
+          }
+
+          // Hide Russian part if browswer language is EN.
+          if (navigator.language.split("-")[0] === "en") {
+            const h1 = document.querySelector(".or");
+            const h2 = document.querySelector(".or_sub");
+            const rusPart = document.querySelector(".rus-part");
+            const enPart = document.querySelector(".en-part");
+            const enPartTitle = document.querySelector(".en_memes");
+            const enPartBtn = document.querySelector(".en_cta_btn");
+
+            h1.classList.add("single");
+            h2.classList.add("single");
+            rusPart.classList.add("hidden");
+            enPartTitle.classList.add("hidden");
+            enPart.classList.add("gradient");
+            enPartBtn.classList.add("big");
+          }
+        });
+      </script>
     </div>
   </body>
 </html>
